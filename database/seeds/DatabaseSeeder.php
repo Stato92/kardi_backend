@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->call([DiseasesTableSeeder::class,
+                    EventTypeTableSeeder::class,
+                    UsersTableSeeder::class,
+                    PatientsTableSeeder::class,
+                    StatusesTableSeeder::class,
+                    PatientCommentsTableSeeder::class,
+                    StatusCommentsTableSeeder::class]);
+    }
+}
